@@ -12,16 +12,18 @@ public class Actuacion {
 
     public void actuar() {
         Datos datos = new Datos();
-        System.out.println("Ponga el número de personas a asistir: ");  //hará un malabarista, cantante y poeta * lo que se ponga
-        concursantes = datos.crearConcursante(sc.nextInt());
+        System.out.println("Ponga el número de personas a asistir: ");  //hará un malabarista, cantante y poeta , y etc etc
+        concursantes = datos.crearConcursante(sc.nextInt()/3);
         int indice;
 
         for (Concursante concursante : concursantes) {
             concursante.saludar();
             concursante.actuar();
             concursante.despedirse();
-            System.out.println("Puntuación: ");
-            concursante.puntuacion=sc.nextInt();
+            do {
+                System.out.println("Puntuación: ");
+                concursante.puntuacion = sc.nextInt();
+            }while (concursante.puntuacion<1 || concursante.puntuacion>20);
         }
 
         System.out.println("Ingrese el número del concursante a meter (meta 0 para terminar): ");

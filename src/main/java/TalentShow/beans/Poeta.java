@@ -14,7 +14,7 @@ public class Poeta extends Concursante{
     }
 
     public void saludar() {
-        System.out.println("Hola, me llamo "+nombre+" y voy a recitar <"+poema+">");
+        System.out.println("Hola, me llamo "+nombre+" y voy a recitar "+poema);
     }
     public void despedirse() {
         System.out.println("Gracias por escuchar!");
