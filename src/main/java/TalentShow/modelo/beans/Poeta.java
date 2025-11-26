@@ -1,8 +1,8 @@
-package TalentShow.beans;
+package TalentShow.modelo.beans;
 
 import java.util.ArrayList;
 
-public class Poeta extends Concursante{
+public class Poeta extends Concursante {
     ArrayList<String> poemas = datos.Poemas();
     String poema= poemas.get((int)(Math.random()*poemas.size()));
 

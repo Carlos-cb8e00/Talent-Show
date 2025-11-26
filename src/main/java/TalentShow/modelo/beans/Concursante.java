@@ -1,4 +1,6 @@
-package TalentShow.beans;
+package TalentShow.modelo.beans;
+
+import TalentShow.modelo.procesos.Datos;
 
 public abstract class Concursante {
     public int num_concursante;

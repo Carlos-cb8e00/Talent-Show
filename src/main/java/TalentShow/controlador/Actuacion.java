@@ -1,7 +1,7 @@
-package TalentShow;
+package TalentShow.controlador;
 
-import TalentShow.beans.Concursante;
-import TalentShow.beans.Datos;
+import TalentShow.modelo.beans.Concursante;
+import TalentShow.modelo.procesos.Datos;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package TalentShow.beans;
+package TalentShow.modelo.beans;
 
 import java.util.ArrayList;
 

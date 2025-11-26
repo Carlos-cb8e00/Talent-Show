@@ -1,4 +1,9 @@
-package TalentShow.beans;
+package TalentShow.modelo.procesos;
+
+import TalentShow.modelo.beans.Cantante;
+import TalentShow.modelo.beans.Concursante;
+import TalentShow.modelo.beans.Malabarista;
+import TalentShow.modelo.beans.Poeta;
 
 import java.util.ArrayList;
 
