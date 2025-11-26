@@ -13,7 +13,7 @@ public class Actuacion {
     public void actuar() {
         Datos datos = new Datos();
         System.out.println("Ponga el número de personas a asistir: ");  //hará un malabarista, cantante y poeta , y etc etc
-        concursantes = datos.crearConcursante(sc.nextInt()/3);
+        concursantes = datos.crearConcursante(sc.nextInt());
         int indice;
 
         for (Concursante concursante : concursantes) {
