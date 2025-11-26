@@ -1,0 +1,40 @@
+package TalentShow;
+
+import TalentShow.beans.Concursante;
+import TalentShow.beans.Datos;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Actuacion {
+    public ArrayList<Concursante> concursantes;
+    Scanner sc = new Scanner(System.in);
+
+    public void actuar() {
+        Datos datos = new Datos();
+        System.out.println("Ponga el número de personas a asistir: ");  //hará un malabarista, cantante y poeta * lo que se ponga
+        concursantes = datos.crearConcursante(sc.nextInt());
+        int indice;
+
+        for (Concursante concursante : concursantes) {
+            concursante.saludar();
+            concursante.actuar();
+            concursante.despedirse();
+            System.out.println("Puntuación: ");
+            concursante.puntuacion=sc.nextInt();
+        }
+
+        System.out.println("Ingrese el número del concursante a meter (meta 0 para terminar): ");
+        indice = sc.nextInt();
+        while (indice>0 && indice<concursantes.size()) {
+            System.out.println("Num_concursante: "+concursantes.get(indice-1).num_concursante+
+                    "\nNombre: "+concursantes.get(indice-1).nombre+
+                    "\nEdad: "+concursantes.get(indice-1).edad+
+                    "\nPuntuación: "+concursantes.get(indice-1).puntuacion);
+            System.out.println("Ingrese el número del concursante a meter (meta 0 para terminar): ");
+            indice = sc.nextInt();
+        }
+
+        System.out.println("FINAL");
+    }
+}
