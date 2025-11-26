@@ -66,4 +66,23 @@ public class Datos{
 
         return objetos;
     }
+
+    public ArrayList<String> Canciones() {
+        ArrayList<String> canciones = new ArrayList<>();
+        canciones.add("Like a Rolling Stone");
+        canciones.add("Imagine");
+        canciones.add("Claro de Luna");
+        canciones.add("Superestrella");
+        canciones.add("Für Elise");
+        canciones.add("Despacito");
+        canciones.add("Shape of You");
+        canciones.add("Respect");
+        canciones.add("Cumpleaños feliz");
+        canciones.add("A quién le importa");
+        canciones.add("No Dudaría");
+        canciones.add("Fiesta pagana");
+        canciones.add("Vivir así es Morir de amor");
+
+        return canciones;
+    }
 }
