@@ -20,6 +20,6 @@ public class Cantante extends Concursante {
         System.out.println("Gracias por escuchar!");
     }
     public void actuar() {
-        System.out.println("Cantando <"+cancion+">");
+        System.out.println("Cantando "+cancion);
     }
 }

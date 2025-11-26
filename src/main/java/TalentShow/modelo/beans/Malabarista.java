@@ -21,7 +21,7 @@ public class Malabarista extends Concursante {
         System.out.println("Gracias por escuchar!");
     }
     public void actuar() {
-        System.out.println("Haciendo malabares con <"+num_objetos+"> <"+objeto+">");
+        System.out.println("Haciendo malabares con "+num_objetos+" "+objeto);
     }
 
 }

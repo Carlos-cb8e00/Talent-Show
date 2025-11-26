@@ -20,7 +20,7 @@ public class Poeta extends Concursante {
         System.out.println("Gracias por escuchar!");
     }
     public void actuar() {
-        System.out.println("Recitando <"+poema+">");
+        System.out.println("Recitando "+poema);
     }
 
 }
