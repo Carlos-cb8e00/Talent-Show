@@ -31,17 +31,10 @@ public class Datos{
     public ArrayList<Concursante> crearConcursante(int tamanio_concurso){
         ArrayList<Concursante> concursantes= new ArrayList<>();
         ArrayList<String> nombres = Nombres();
-        for (int i=1;i <= tamanio_concurso;i++) {
-            if (i%3==1) {
-                concursantes.add(new Malabarista(i,nombres.get((int)(Math.random()*nombres.size())),((int)(Math.random()*92+8)),0)); //por eso de que no puedan asistir bebés
-            } else if (i%3==2) {
-                concursantes.add(new Cantante(i+1,nombres.get((int)(Math.random()*nombres.size())),((int)(Math.random()*92+8)),0));
-            } else {
-                concursantes.add(new Poeta(i+2,nombres.get((int)(Math.random()*nombres.size())),((int)(Math.random()*92+8)),0));
-            }
-
-
-
+        for (int i=1;i < tamanio_concurso*3;i+=3) {
+            concursantes.add(new Malabarista(i,nombres.get((int)(Math.random()*nombres.size())),((int)(Math.random()*92+8)),0)); //por eso de que no puedan asistir bebés
+            concursantes.add(new Cantante(i+1,nombres.get((int)(Math.random()*nombres.size())),((int)(Math.random()*92+8)),0));
+            concursantes.add(new Poeta(i+2,nombres.get((int)(Math.random()*nombres.size())),((int)(Math.random()*92+8)),0));
         }
 
         return concursantes;
