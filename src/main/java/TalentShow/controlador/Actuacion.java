@@ -40,10 +40,10 @@ public class Actuacion {
                 indice = sc.nextInt();
             }
 
-            System.out.println("FINAL");
-
         } catch (InputMismatchException eio) {
             System.out.println("Eso no es ni una puntuación ni un número de concursante");
+        } finally {
+            System.out.println("FINAL");
         }
 
     }
