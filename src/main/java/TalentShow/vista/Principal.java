@@ -3,8 +3,8 @@ package TalentShow.vista;
 import TalentShow.controlador.Actuacion;
 
 public class Principal {
-    public static void main(String[] args) {
+    static void main() {
         Actuacion actuacion = new Actuacion();
-        actuacion.actuar();
+        actuacion.proceder();
     }
 }

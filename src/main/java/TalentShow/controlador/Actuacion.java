@@ -11,7 +11,7 @@ public class Actuacion {
     public ArrayList<Concursante> concursantes;
     Scanner sc = new Scanner(System.in);
 
-    public void actuar() {
+    public void proceder() {
         Datos datos = new Datos();
 
         try {
@@ -20,22 +20,13 @@ public class Actuacion {
             int indice;
 
             for (Concursante concursante : concursantes) {
-                concursante.saludar();
-                concursante.actuar();
-                concursante.despedirse();
-                do {
-                    System.out.println("Puntuación: ");
-                    concursante.puntuacion = sc.nextInt();
-                }while (concursante.puntuacion<1 || concursante.puntuacion>20);
+                mostrarConcursante(concursante);
             }
 
             System.out.println("Ingrese el número del concursante a meter (meta 0 para terminar): ");
             indice = sc.nextInt();
             while (indice>0 && indice<concursantes.size()) {
-                System.out.println("Num_concursante: "+concursantes.get(indice-1).num_concursante+
-                        "\nNombre: "+concursantes.get(indice-1).nombre+
-                        "\nEdad: "+concursantes.get(indice-1).edad+
-                        "\nPuntuación: "+concursantes.get(indice-1).puntuacion);
+                System.out.println(toString(indice));
                 System.out.println("Ingrese el número del concursante a meter (meta 0 para terminar): ");
                 indice = sc.nextInt();
             }
@@ -45,6 +36,22 @@ public class Actuacion {
         } finally {
             System.out.println("FINAL");
         }
+    }
 
+    public String toString(int indice) {
+        return "Num_concursante: "+concursantes.get(indice-1).num_concursante+
+                "\nNombre: "+concursantes.get(indice-1).nombre+
+                "\nEdad: "+concursantes.get(indice-1).edad+
+                "\nPuntuación: "+concursantes.get(indice-1).puntuacion;
+    }
+
+    public void mostrarConcursante(Concursante concursante) {
+        concursante.saludar();
+        concursante.actuar();
+        concursante.despedirse();
+        do {
+            System.out.println("Puntuación: ");
+            concursante.puntuacion = sc.nextInt();
+        }while (concursante.puntuacion<1 || concursante.puntuacion>20);
     }
 }
